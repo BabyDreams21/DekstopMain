@@ -29,9 +29,8 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.gunaElipse1 = new Guna.UI.WinForms.GunaElipse(this.components);
-            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
-            this.txtresult = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox2 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaLabel2 = new Guna.UI.WinForms.GunaLabel();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -46,71 +45,49 @@
             this.gunaPanel2 = new Guna.UI.WinForms.GunaPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.projectContainer = new System.Windows.Forms.FlowLayoutPanel();
-            this.projects1 = new Hubstaf.Resources.projects();
             this.gunaElipsePanel1 = new Guna.UI.WinForms.GunaElipsePanel();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.gunaLabel5 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaLabel6 = new Guna.UI.WinForms.GunaLabel();
+            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.stopstrip = new System.Windows.Forms.ToolStripMenuItem();
             this.startstrip = new System.Windows.Forms.ToolStripMenuItem();
-            this.gunaElipsePanel2 = new Guna.UI.WinForms.GunaElipsePanel();
-            this.gunaButton2 = new Guna.UI.WinForms.GunaButton();
+            this.notifyIcon2 = new System.Windows.Forms.NotifyIcon(this.components);
+            this.gunaElipsePanel3 = new Guna.UI.WinForms.GunaElipsePanel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.txtresult = new Guna.UI.WinForms.GunaTextBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.gunaLabel1 = new Guna.UI.WinForms.GunaLabel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnmax = new Guna.UI.WinForms.GunaButton();
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.gunaElipsePanel4 = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
+            this.btnmax = new Guna.UI.WinForms.GunaButton();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.gunaPanel2.SuspendLayout();
-            this.projectContainer.SuspendLayout();
+            this.gunaElipsePanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
+            this.gunaElipsePanel3.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            this.gunaElipsePanel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
             // gunaElipse1
             // 
             this.gunaElipse1.TargetControl = this;
-            // 
-            // gunaLabel1
-            // 
-            this.gunaLabel1.AutoSize = true;
-            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel1.Location = new System.Drawing.Point(131, 93);
-            this.gunaLabel1.Name = "gunaLabel1";
-            this.gunaLabel1.Size = new System.Drawing.Size(76, 21);
-            this.gunaLabel1.TabIndex = 0;
-            this.gunaLabel1.Text = "Software";
-            // 
-            // txtresult
-            // 
-            this.txtresult.BackColor = System.Drawing.Color.Transparent;
-            this.txtresult.BaseColor = System.Drawing.Color.BlanchedAlmond;
-            this.txtresult.BorderColor = System.Drawing.Color.BlanchedAlmond;
-            this.txtresult.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtresult.FocusedBaseColor = System.Drawing.Color.White;
-            this.txtresult.FocusedBorderColor = System.Drawing.Color.Transparent;
-            this.txtresult.FocusedForeColor = System.Drawing.Color.Transparent;
-            this.txtresult.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtresult.ForeColor = System.Drawing.Color.Black;
-            this.txtresult.Location = new System.Drawing.Point(87, 49);
-            this.txtresult.Name = "txtresult";
-            this.txtresult.PasswordChar = '\0';
-            this.txtresult.Radius = 10;
-            this.txtresult.ReadOnly = true;
-            this.txtresult.SelectedText = "";
-            this.txtresult.Size = new System.Drawing.Size(160, 32);
-            this.txtresult.TabIndex = 30;
-            this.txtresult.Text = "00:00:00";
-            this.txtresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // gunaTextBox2
             // 
@@ -120,9 +97,9 @@
             this.gunaTextBox2.FocusedBaseColor = System.Drawing.Color.White;
             this.gunaTextBox2.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaTextBox2.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.gunaTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaTextBox2.Location = new System.Drawing.Point(29, 262);
+            this.gunaTextBox2.Location = new System.Drawing.Point(25, 187);
             this.gunaTextBox2.Name = "gunaTextBox2";
             this.gunaTextBox2.PasswordChar = '\0';
             this.gunaTextBox2.SelectedText = "";
@@ -136,10 +113,11 @@
             // gunaLabel2
             // 
             this.gunaLabel2.AutoSize = true;
-            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.gunaLabel2.Location = new System.Drawing.Point(52, 10);
+            this.gunaLabel2.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel2.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel2.Location = new System.Drawing.Point(47, 8);
             this.gunaLabel2.Name = "gunaLabel2";
-            this.gunaLabel2.Size = new System.Drawing.Size(57, 17);
+            this.gunaLabel2.Size = new System.Drawing.Size(60, 17);
             this.gunaLabel2.TabIndex = 6;
             this.gunaLabel2.Text = "Hubstaff";
             // 
@@ -158,7 +136,7 @@
             this.gunaLabel3.AutoSize = true;
             this.gunaLabel3.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel3.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel3.Location = new System.Drawing.Point(351, 49);
+            this.gunaLabel3.Location = new System.Drawing.Point(351, 6);
             this.gunaLabel3.Name = "gunaLabel3";
             this.gunaLabel3.Size = new System.Drawing.Size(60, 21);
             this.gunaLabel3.TabIndex = 8;
@@ -169,7 +147,7 @@
             this.gunaLabel4.AutoSize = true;
             this.gunaLabel4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaLabel4.ForeColor = System.Drawing.Color.Black;
-            this.gunaLabel4.Location = new System.Drawing.Point(351, 79);
+            this.gunaLabel4.Location = new System.Drawing.Point(351, 36);
             this.gunaLabel4.Name = "gunaLabel4";
             this.gunaLabel4.Size = new System.Drawing.Size(53, 13);
             this.gunaLabel4.TabIndex = 9;
@@ -259,7 +237,7 @@
             this.gunaTextBox4.FocusedBaseColor = System.Drawing.Color.White;
             this.gunaTextBox4.FocusedBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
             this.gunaTextBox4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
-            this.gunaTextBox4.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaTextBox4.ForeColor = System.Drawing.Color.DimGray;
             this.gunaTextBox4.Location = new System.Drawing.Point(355, 145);
             this.gunaTextBox4.Name = "gunaTextBox4";
@@ -273,8 +251,7 @@
             // 
             // gunaButton1
             // 
-            this.gunaButton1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaButton1.AnimationHoverSpeed = 0.07F;
             this.gunaButton1.AnimationSpeed = 0.03F;
             this.gunaButton1.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
@@ -300,7 +277,7 @@
             // 
             // gunaPanel2
             // 
-            this.gunaPanel2.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.gunaPanel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.gunaPanel2.Controls.Add(this.label1);
             this.gunaPanel2.Location = new System.Drawing.Point(2, 310);
             this.gunaPanel2.Name = "gunaPanel2";
@@ -310,8 +287,8 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Location = new System.Drawing.Point(3, 14);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(51, 17);
@@ -324,21 +301,10 @@
             | System.Windows.Forms.AnchorStyles.Left)));
             this.projectContainer.AutoScroll = true;
             this.projectContainer.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.projectContainer.Controls.Add(this.projects1);
             this.projectContainer.Location = new System.Drawing.Point(5, 360);
             this.projectContainer.Name = "projectContainer";
             this.projectContainer.Size = new System.Drawing.Size(328, 219);
             this.projectContainer.TabIndex = 26;
-            // 
-            // projects1
-            // 
-            this.projects1.BackColor = System.Drawing.Color.White;
-            this.projects1.Id = null;
-            this.projects1.Location = new System.Drawing.Point(3, 3);
-            this.projects1.Name = "projects1";
-            this.projects1.projectName = null;
-            this.projects1.Size = new System.Drawing.Size(320, 45);
-            this.projects1.TabIndex = 0;
             // 
             // gunaElipsePanel1
             // 
@@ -355,64 +321,58 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 60000;
+            this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(1110, 46);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.menuStrip1.Size = new System.Drawing.Size(27, 24);
-            this.menuStrip1.TabIndex = 29;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // toolStripMenuItem1
-            // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.stopstrip,
-            this.startstrip});
-            this.toolStripMenuItem1.Image = global::Hubstaf.Properties.Resources.menu_vertical_48px;
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 20);
-            // 
-            // stopstrip
-            // 
-            this.stopstrip.Name = "stopstrip";
-            this.stopstrip.Size = new System.Drawing.Size(129, 22);
-            this.stopstrip.Text = "Stop";
-            this.stopstrip.Click += new System.EventHandler(this.stopstrip_Click);
-            // 
-            // startstrip
-            // 
-            this.startstrip.Name = "startstrip";
-            this.startstrip.Size = new System.Drawing.Size(129, 22);
-            this.startstrip.Text = "Start Work";
-            this.startstrip.Click += new System.EventHandler(this.startstrip_Click);
             // 
             // gunaElipsePanel2
             // 
             this.gunaElipsePanel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaElipsePanel2.AutoScroll = true;
             this.gunaElipsePanel2.BackColor = System.Drawing.Color.Transparent;
             this.gunaElipsePanel2.BaseColor = System.Drawing.Color.White;
-            this.gunaElipsePanel2.Location = new System.Drawing.Point(354, 176);
+            this.gunaElipsePanel2.Controls.Add(this.panel5);
+            this.gunaElipsePanel2.Controls.Add(this.gunaLabel5);
+            this.gunaElipsePanel2.Controls.Add(this.gunaLabel6);
+            this.gunaElipsePanel2.Location = new System.Drawing.Point(354, 238);
             this.gunaElipsePanel2.Name = "gunaElipsePanel2";
-            this.gunaElipsePanel2.Size = new System.Drawing.Size(754, 234);
+            this.gunaElipsePanel2.Size = new System.Drawing.Size(771, 172);
             this.gunaElipsePanel2.TabIndex = 31;
+            // 
+            // panel5
+            // 
+            this.panel5.Location = new System.Drawing.Point(209, 0);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(3, 30);
+            this.panel5.TabIndex = 10;
+            // 
+            // gunaLabel5
+            // 
+            this.gunaLabel5.AutoSize = true;
+            this.gunaLabel5.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel5.Location = new System.Drawing.Point(244, 6);
+            this.gunaLabel5.Name = "gunaLabel5";
+            this.gunaLabel5.Size = new System.Drawing.Size(61, 20);
+            this.gunaLabel5.TabIndex = 9;
+            this.gunaLabel5.Text = "Created";
+            // 
+            // gunaLabel6
+            // 
+            this.gunaLabel6.AutoSize = true;
+            this.gunaLabel6.Font = new System.Drawing.Font("Segoe UI", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel6.Location = new System.Drawing.Point(21, 6);
+            this.gunaLabel6.Name = "gunaLabel6";
+            this.gunaLabel6.Size = new System.Drawing.Size(51, 20);
+            this.gunaLabel6.TabIndex = 8;
+            this.gunaLabel6.Text = "To-Do";
             // 
             // gunaButton2
             // 
-            this.gunaButton2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.gunaButton2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.gunaButton2.AnimationHoverSpeed = 0.07F;
             this.gunaButton2.AnimationSpeed = 0.03F;
-            this.gunaButton2.BaseColor = System.Drawing.Color.Red;
+            this.gunaButton2.BackColor = System.Drawing.Color.Transparent;
+            this.gunaButton2.BaseColor = System.Drawing.Color.Transparent;
             this.gunaButton2.BorderColor = System.Drawing.Color.Black;
             this.gunaButton2.DialogResult = System.Windows.Forms.DialogResult.None;
             this.gunaButton2.FocusedColor = System.Drawing.Color.Empty;
@@ -422,7 +382,7 @@
             this.gunaButton2.ImageSize = new System.Drawing.Size(20, 20);
             this.gunaButton2.Location = new System.Drawing.Point(1109, 2);
             this.gunaButton2.Name = "gunaButton2";
-            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.gunaButton2.OnHoverBaseColor = System.Drawing.Color.Red;
             this.gunaButton2.OnHoverBorderColor = System.Drawing.Color.Black;
             this.gunaButton2.OnHoverForeColor = System.Drawing.Color.White;
             this.gunaButton2.OnHoverImage = null;
@@ -433,16 +393,132 @@
             this.gunaButton2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.gunaButton2.Click += new System.EventHandler(this.gunaButton2_Click_1);
             // 
+            // notifyIcon1
+            // 
+            this.notifyIcon1.Icon = ((System.Drawing.Icon)(resources.GetObject("notifyIcon1.Icon")));
+            this.notifyIcon1.Text = "notifyIcon1";
+            this.notifyIcon1.Visible = true;
+            this.notifyIcon1.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.notifyIcon1_MouseDoubleClick);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.menuStrip1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1});
+            this.menuStrip1.Location = new System.Drawing.Point(1097, 49);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.menuStrip1.ShowItemToolTips = true;
+            this.menuStrip1.Size = new System.Drawing.Size(36, 24);
+            this.menuStrip1.TabIndex = 29;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.stopstrip,
+            this.startstrip});
+            this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.toolStripMenuItem1.Image = global::Hubstaf.Properties.Resources.menu_vertical_48px;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(28, 20);
+            // 
+            // stopstrip
+            // 
+            this.stopstrip.Name = "stopstrip";
+            this.stopstrip.Size = new System.Drawing.Size(137, 22);
+            this.stopstrip.Text = "Stop";
+            this.stopstrip.Click += new System.EventHandler(this.stopstrip_Click);
+            // 
+            // startstrip
+            // 
+            this.startstrip.Name = "startstrip";
+            this.startstrip.Size = new System.Drawing.Size(137, 22);
+            this.startstrip.Text = "Start Work";
+            this.startstrip.Click += new System.EventHandler(this.startstrip_Click);
+            // 
+            // notifyIcon2
+            // 
+            this.notifyIcon2.Text = "notifyIcon2";
+            this.notifyIcon2.Visible = true;
+            // 
+            // gunaElipsePanel3
+            // 
+            this.gunaElipsePanel3.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel3.BaseColor = System.Drawing.Color.White;
+            this.gunaElipsePanel3.Controls.Add(this.panel4);
+            this.gunaElipsePanel3.Controls.Add(this.txtresult);
+            this.gunaElipsePanel3.Controls.Add(this.panel3);
+            this.gunaElipsePanel3.Controls.Add(this.gunaLabel1);
+            this.gunaElipsePanel3.Controls.Add(this.panel2);
+            this.gunaElipsePanel3.Controls.Add(this.pictureBox4);
+            this.gunaElipsePanel3.Controls.Add(this.gunaTextBox2);
+            this.gunaElipsePanel3.Location = new System.Drawing.Point(8, 51);
+            this.gunaElipsePanel3.Name = "gunaElipsePanel3";
+            this.gunaElipsePanel3.Size = new System.Drawing.Size(325, 253);
+            this.gunaElipsePanel3.TabIndex = 34;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel4.Location = new System.Drawing.Point(16, 121);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(100, 3);
+            this.panel4.TabIndex = 42;
+            // 
+            // txtresult
+            // 
+            this.txtresult.BackColor = System.Drawing.Color.Transparent;
+            this.txtresult.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.txtresult.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.txtresult.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtresult.FocusedBaseColor = System.Drawing.Color.White;
+            this.txtresult.FocusedBorderColor = System.Drawing.Color.Transparent;
+            this.txtresult.FocusedForeColor = System.Drawing.Color.Transparent;
+            this.txtresult.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtresult.ForeColor = System.Drawing.Color.White;
+            this.txtresult.Location = new System.Drawing.Point(68, 9);
+            this.txtresult.Name = "txtresult";
+            this.txtresult.PasswordChar = '\0';
+            this.txtresult.Radius = 10;
+            this.txtresult.ReadOnly = true;
+            this.txtresult.SelectedText = "";
+            this.txtresult.Size = new System.Drawing.Size(160, 32);
+            this.txtresult.TabIndex = 39;
+            this.txtresult.Text = "00:00:00";
+            this.txtresult.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.SystemColors.ButtonShadow;
+            this.panel3.Location = new System.Drawing.Point(186, 121);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(100, 3);
+            this.panel3.TabIndex = 41;
+            // 
+            // gunaLabel1
+            // 
+            this.gunaLabel1.AutoSize = true;
+            this.gunaLabel1.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gunaLabel1.ForeColor = System.Drawing.Color.Black;
+            this.gunaLabel1.Location = new System.Drawing.Point(112, 53);
+            this.gunaLabel1.Name = "gunaLabel1";
+            this.gunaLabel1.Size = new System.Drawing.Size(76, 21);
+            this.gunaLabel1.TabIndex = 37;
+            this.gunaLabel1.Text = "Software";
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.panel2.Controls.Add(this.pictureBox2);
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.ForeColor = System.Drawing.Color.DimGray;
-            this.panel2.Location = new System.Drawing.Point(135, 128);
+            this.panel2.Location = new System.Drawing.Point(116, 88);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(70, 70);
-            this.panel2.TabIndex = 34;
+            this.panel2.TabIndex = 40;
             // 
             // pictureBox2
             // 
@@ -452,8 +528,7 @@
             this.pictureBox2.Size = new System.Drawing.Size(52, 52);
             this.pictureBox2.TabIndex = 17;
             this.pictureBox2.TabStop = false;
-            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click);
-            this.pictureBox2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox2_MouseMove);
+            this.pictureBox2.Click += new System.EventHandler(this.pictureBox2_Click_1);
             // 
             // pictureBox1
             // 
@@ -463,14 +538,53 @@
             this.pictureBox1.Size = new System.Drawing.Size(52, 52);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_1);
-            this.pictureBox1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pictureBox1_MouseMove);
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click_2);
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackgroundImage = global::Hubstaf.Properties.Resources.create_document_48px;
+            this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox4.Location = new System.Drawing.Point(234, 9);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(35, 35);
+            this.pictureBox4.TabIndex = 38;
+            this.pictureBox4.TabStop = false;
+            // 
+            // gunaElipsePanel4
+            // 
+            this.gunaElipsePanel4.BackColor = System.Drawing.Color.Transparent;
+            this.gunaElipsePanel4.BaseColor = System.Drawing.Color.White;
+            this.gunaElipsePanel4.Controls.Add(this.gunaLabel2);
+            this.gunaElipsePanel4.Controls.Add(this.gunaPictureBox1);
+            this.gunaElipsePanel4.Location = new System.Drawing.Point(8, 2);
+            this.gunaElipsePanel4.Name = "gunaElipsePanel4";
+            this.gunaElipsePanel4.Size = new System.Drawing.Size(200, 40);
+            this.gunaElipsePanel4.TabIndex = 35;
+            // 
+            // gunaPictureBox1
+            // 
+            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
+            this.gunaPictureBox1.Image = global::Hubstaf.Properties.Resources.hubstaf_removebg_preview__2___1_;
+            this.gunaPictureBox1.Location = new System.Drawing.Point(3, -2);
+            this.gunaPictureBox1.Name = "gunaPictureBox1";
+            this.gunaPictureBox1.Size = new System.Drawing.Size(38, 35);
+            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.gunaPictureBox1.TabIndex = 5;
+            this.gunaPictureBox1.TabStop = false;
+            // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(417, 190);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 27);
+            this.flowLayoutPanel1.TabIndex = 36;
             // 
             // btnmax
             // 
+            this.btnmax.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnmax.AnimationHoverSpeed = 0.07F;
             this.btnmax.AnimationSpeed = 0.03F;
-            this.btnmax.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.btnmax.BackColor = System.Drawing.Color.Transparent;
             this.btnmax.BaseColor = System.Drawing.Color.Transparent;
             this.btnmax.BorderColor = System.Drawing.Color.Black;
             this.btnmax.DialogResult = System.Windows.Forms.DialogResult.None;
@@ -492,51 +606,14 @@
             this.btnmax.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.btnmax.Click += new System.EventHandler(this.gunaButton3_Click);
             // 
-            // pictureBox4
-            // 
-            this.pictureBox4.Image = global::Hubstaf.Properties.Resources.create_document_48px;
-            this.pictureBox4.Location = new System.Drawing.Point(263, 42);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(40, 50);
-            this.pictureBox4.TabIndex = 30;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Click += new System.EventHandler(this.pictureBox4_Click);
-            // 
             // pictureBox3
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(540, 29);
+            this.pictureBox3.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.pictureBox3.Location = new System.Drawing.Point(705, 23);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(100, 50);
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
-            // 
-            // gunaPictureBox1
-            // 
-            this.gunaPictureBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaPictureBox1.Image = global::Hubstaf.Properties.Resources.hubstaf_removebg_preview__2___1_;
-            this.gunaPictureBox1.Location = new System.Drawing.Point(8, 10);
-            this.gunaPictureBox1.Name = "gunaPictureBox1";
-            this.gunaPictureBox1.Size = new System.Drawing.Size(38, 35);
-            this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.gunaPictureBox1.TabIndex = 5;
-            this.gunaPictureBox1.TabStop = false;
-            // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel3.Location = new System.Drawing.Point(205, 161);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(100, 3);
-            this.panel3.TabIndex = 35;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.panel4.Location = new System.Drawing.Point(35, 161);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(100, 3);
-            this.panel4.TabIndex = 36;
             // 
             // Form1
             // 
@@ -545,13 +622,12 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1137, 591);
-            this.Controls.Add(this.panel4);
-            this.Controls.Add(this.panel3);
-            this.Controls.Add(this.panel2);
+            this.Controls.Add(this.flowLayoutPanel1);
+            this.Controls.Add(this.gunaElipsePanel4);
+            this.Controls.Add(this.gunaElipsePanel3);
             this.Controls.Add(this.btnmax);
             this.Controls.Add(this.gunaButton2);
             this.Controls.Add(this.gunaElipsePanel2);
-            this.Controls.Add(this.pictureBox4);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.gunaElipsePanel1);
             this.Controls.Add(this.projectContainer);
@@ -565,11 +641,6 @@
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.gunaLabel2);
-            this.Controls.Add(this.gunaPictureBox1);
-            this.Controls.Add(this.gunaTextBox2);
-            this.Controls.Add(this.txtresult);
-            this.Controls.Add(this.gunaLabel1);
             this.Controls.Add(this.menuStrip1);
             this.ForeColor = System.Drawing.Color.DimGray;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -581,15 +652,20 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.gunaPanel2.ResumeLayout(false);
             this.gunaPanel2.PerformLayout();
-            this.projectContainer.ResumeLayout(false);
+            this.gunaElipsePanel2.ResumeLayout(false);
+            this.gunaElipsePanel2.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.gunaElipsePanel3.ResumeLayout(false);
+            this.gunaElipsePanel3.PerformLayout();
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            this.gunaElipsePanel4.ResumeLayout(false);
+            this.gunaElipsePanel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gunaPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,9 +673,7 @@
 
         #endregion
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
-        private Guna.UI.WinForms.GunaLabel gunaLabel1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
-        private Guna.UI.WinForms.GunaTextBox txtresult;
         private Guna.UI.WinForms.GunaCheckBox gunaCheckBox1;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox2;
         private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
@@ -611,26 +685,35 @@
         private Guna.UI.WinForms.GunaButton gunaButton1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox4;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox3;
-        private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.PictureBox pictureBox2;
         private Guna.UI.WinForms.GunaPanel gunaPanel2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.FlowLayoutPanel projectContainer;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel1;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Timer timer1;
+        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel2;
+        private Guna.UI.WinForms.GunaButton gunaButton2;
+        private Guna.UI.WinForms.GunaButton btnmax;
+        private System.Windows.Forms.NotifyIcon notifyIcon1;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem stopstrip;
         private System.Windows.Forms.ToolStripMenuItem startstrip;
-        private System.Windows.Forms.PictureBox pictureBox4;
-        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel2;
-        private Guna.UI.WinForms.GunaButton gunaButton2;
-        private Guna.UI.WinForms.GunaButton btnmax;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.NotifyIcon notifyIcon2;
+        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel3;
         private System.Windows.Forms.Panel panel4;
+        private Guna.UI.WinForms.GunaTextBox txtresult;
         private System.Windows.Forms.Panel panel3;
-        private Resources.projects projects1;
+        private Guna.UI.WinForms.GunaLabel gunaLabel1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pictureBox4;
+        private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Panel panel5;
+        private Guna.UI.WinForms.GunaLabel gunaLabel5;
+        private Guna.UI.WinForms.GunaLabel gunaLabel6;
     }
 }
 

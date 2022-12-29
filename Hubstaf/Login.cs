@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,9 @@ namespace Hubstaf
 {
     public partial class Login : Form
     {
+ 
+       
+        
         public class User
         {
             public string email { get; set; }
@@ -112,6 +116,98 @@ namespace Hubstaf
             //{
             //    CallAPI.POST("login-validate", "{ \"email\":" + txtUserName.Text + " ,\"password\":" + txtPassword.Text + ",\"time\": " + DateTime.Now.ToString("yyyy-MM-dd h:mm tt") + "}");
             //}
+        }
+
+        private async void btndone_Click(object sender, EventArgs e)
+        {
+            using (var client = new HttpClient())
+            {
+                try
+                {
+                    string apiEndpoint = "https://5ffd-158-140-172-123.ap.ngrok.io/api/member";
+                    string username = gunaTextBox1.Text;
+                    string password = gunaTextBox2.Text;
+                    var payload = new FormUrlEncodedContent(new[]
+                    {
+                 new KeyValuePair<string, string>("email", username),
+                 new KeyValuePair<string, string>("password", password)
+                });
+                    var response = await client.PostAsync(apiEndpoint, payload);
+                    MessageBox.Show(payload.ToString());
+                    if (response.IsSuccessStatusCode)
+                    {
+                        var responseContent = await response.Content.ReadAsStringAsync();
+                        var obj = JObject.Parse(responseContent);
+                        var getId = obj["Data"]["idMember"];
+                        Id.idMember = Convert.ToInt32(getId);
+
+                        Form1 form = new Form1();
+                        form.Show();
+                        this.Hide();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Ada Yang Salah");
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                
+            }
+               
+        }
+
+        //using (var client = new HttpClient())
+        //{
+        //    var payload = new FormUrlEncodedContent(new[]
+        //    {
+        //new KeyValuePair<string, string>("email", username),
+        //new KeyValuePair<string, string>("password", password)
+        //   });
+
+        //     var response = await client.PostAsync(apiEndpoint, payload);
+
+        //    var responseContent = await response.Content.ReadAsStringAsync();
+        //    var obj = JObject.Parse(responseContent);
+        //    var getId = obj["Data"]["idMember"];
+        //    Id.idMember = Convert.ToInt32(getId);
+
+        //    Form1 form = new Form1();
+        //    form.Show();
+        //    this.Hide();
+        //    if (response.IsSuccessStatusCode)
+        //    {
+        //        // Login was successful. Extract the necessary information from the response,
+        //        // such as an authentication token, and close the login form.
+        //        MessageBox.Show("Succes");
+        //        Form1 j = new Form1();
+        //        j.Show();
+        //        this.Hide();
+        //        this.Close();
+        //    }
+        //    else
+        //    {
+        //        // Login was unsuccessful. Display an error message to the user.
+        //        MessageBox.Show("Invalid username or password.");
+        //    }
+        //}
+
+
+
+    
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked)
+            {
+                gunaTextBox2.UseSystemPasswordChar = true;
+            }
+            else
+            {
+                gunaTextBox2.UseSystemPasswordChar = false;
+            }
         }
     }
 }

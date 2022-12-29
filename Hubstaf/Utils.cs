@@ -7,6 +7,12 @@ using System.Threading.Tasks;
 
 namespace Hubstaf
 {
+    class Id
+    {
+        //public static int idMember { get; set; }
+        public static int idMember;
+        public static int idProject;
+    }
    class utils
     {
        public static string con = "Data Source = DESKTOP-M5SO53H\\SQLEXPRESS;Initial Catalog = backuphotel2;Integrated security = true;";
@@ -22,4 +28,7 @@ namespace Hubstaf
         public static string note { get; set; }
         public static string a { get; set; }
     }
+
+
+    
 }

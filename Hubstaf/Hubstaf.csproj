@@ -157,6 +157,12 @@
     <Compile Include="Timer.Designer.cs">
       <DependentUpon>Timer.cs</DependentUpon>
     </Compile>
+    <Compile Include="Todo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Todo.Designer.cs">
+      <DependentUpon>Todo.cs</DependentUpon>
+    </Compile>
     <Compile Include="todos.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -207,6 +213,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Timer.resx">
       <DependentUpon>Timer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Todo.resx">
+      <DependentUpon>Todo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="todos.resx">
       <DependentUpon>todos.cs</DependentUpon>

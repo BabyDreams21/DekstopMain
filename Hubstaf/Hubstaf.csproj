@@ -122,6 +122,7 @@
     <Compile Include="AddWorks.Designer.cs">
       <DependentUpon>AddWorks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Class1.cs" />
     <Compile Include="Dahsboard.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -12,6 +12,36 @@ namespace Hubstaf
         //public static int idMember { get; set; }
         public static int idMember;
         public static int idProject;
+
+    }
+
+    class koneksi
+    {
+        public string conlogin()
+        {
+            string apiEndPoint = "";
+            return apiEndPoint;
+        }
+        public string conscreen()
+        {
+            string apiEndPoint = "";
+            return apiEndPoint;
+        }
+        public string contodo()
+        {
+            string apiEndPoint = "";
+            return apiEndPoint;
+        }
+        public string conproject()
+        {
+            string apiEndPoint = "";
+            return apiEndPoint;
+        }
+        public string conmember()
+        {
+            string apiEndPoint = "";
+            return apiEndPoint;
+        }
     }
    class utils
     {

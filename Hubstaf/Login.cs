@@ -16,6 +16,7 @@ namespace Hubstaf
 {
     public partial class Login : Form
     {
+        koneksi con = new koneksi();
  
        
         
@@ -120,43 +121,41 @@ namespace Hubstaf
 
         private async void btndone_Click(object sender, EventArgs e)
         {
+            string username = usr.Text;
+            string password = pwd.Text; MessageBox.Show(username, password);
+
             using (var client = new HttpClient())
             {
-                try
+                var payload = new FormUrlEncodedContent(new[]
                 {
-                    string apiEndpoint = "https://5ffd-158-140-172-123.ap.ngrok.io/api/member";
-                    string username = gunaTextBox1.Text;
-                    string password = gunaTextBox2.Text;
-                    var payload = new FormUrlEncodedContent(new[]
-                    {
-                 new KeyValuePair<string, string>("email", username),
-                 new KeyValuePair<string, string>("password", password)
-                });
-                    var response = await client.PostAsync(apiEndpoint, payload);
-                    MessageBox.Show(payload.ToString());
-                    if (response.IsSuccessStatusCode)
-                    {
-                        var responseContent = await response.Content.ReadAsStringAsync();
-                        var obj = JObject.Parse(responseContent);
-                        var getId = obj["Data"]["idMember"];
-                        Id.idMember = Convert.ToInt32(getId);
+                    new KeyValuePair<string, string>("email", username),
+                    new KeyValuePair<string, string>("password", password)
 
-                        Form1 form = new Form1();
-                        form.Show();
-                        this.Hide();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Ada Yang Salah");
-                    }
-                }
-                catch (Exception ex)
+                });
+
+                var response = await client.PostAsync(con.conlogin(), payload);
+
+                if (response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show(ex.Message);
+                    var responseContent = await response.Content.ReadAsStringAsync(); 
+                    var obj = JObject.Parse(responseContent); 
+                    var getIdp = obj["Data"]["idProject"];
+                    var getId = obj["Data"]["idMember"];
+                   Id.idMember = Convert.ToInt32(getId);
+                    Id.idProject = Convert.ToInt32(getIdp);
+                    Form1 form = new Form1();
+                    form.Show(); 
+                    this.Hide();
+
                 }
-                
+                else
+                {
+                    MessageBox.Show("Invalid username or password.");
+                }
+// Login was unsuccessful. Display an error message to the user. 
+
+
             }
-               
         }
 
         //using (var client = new HttpClient())

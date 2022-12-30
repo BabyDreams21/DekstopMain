@@ -23,9 +23,9 @@ namespace Hubstaf
 {
     public partial class Form1 : Form
     {
-        MySqlConnection con = new MySqlConnection(utils.conn);
+      //  MySqlConnection con = new MySqlConnection(utils.conn);
         MySqlCommand cmd;
-
+        koneksi con = new koneksi();
         
 
         System.Timers.Timer t;
@@ -126,62 +126,25 @@ namespace Hubstaf
             }
         }
 
-        //void check()
-        //{
-        //    string apiEndpoint = "https://0c6b-158-140-172-123.ap.ngrok.io/api/screenshot";
-        //    //byte[] foto = photo;
 
-
-        //    using (var client = new HttpClient())
-        //    {
-        //        var payload = new FormUrlEncodedContent(new[]
-        //        {
-        //            new KeyValuePair<string, string>("idMember", .ToString()),
-        //            new KeyValuePair<string, string>("date", now),
-        //            new KeyValuePair<string, string>("idProject", 2.ToString()),
-        //    new KeyValuePair<string, string>("screenshot", photo.ToString())
-        //         });
-
-        //    }
-        //}
-            private void showtodo()
+        void getdata()
         {
-            try
+            var webrequest = (HttpWebRequest)WebRequest.Create(con.conproject()); var webrespon = (HttpWebResponse)webrequest.GetResponse();
+            if ((webrespon.StatusCode == HttpStatusCode.OK))
             {
-                string url = "https://0c6b-158-140-172-123.ap.ngrok.io/api/todo";
-                var webrequest = (HttpWebRequest)WebRequest.Create(url);
-                var webrespon = (HttpWebResponse)webrequest.GetResponse();
-                if ((webrespon.StatusCode == HttpStatusCode.OK))
-                {
-
-                    var reader = new StreamReader(webrespon.GetResponseStream());
-                    string data = reader.ReadToEnd();
-                    var obj = JObject.Parse(data);
-                    var getdata = obj["Data"];
-
-                    DataTable dt = (DataTable)JsonConvert.DeserializeObject(getdata.ToString(), (typeof(DataTable)));
-
-                    int dataCount = dt.Rows.Count;
-                    Todo[] todoList = new Todo[dataCount];
-                    for (int i = 0; i < todoList.Length; i++)
-                    {
-                        todoList[i] = new Todo();
-                        todoList[i].todoname = getdata[i]["nameTodo"].ToString();
-                        todoList[i].timename = getdata[i]["changed"].ToString();
-                        todoList[i].Id = getdata[i]["idTodo"].ToString();
-                        if (projectContainer.Controls.Count < 0)
-                        {
-                            gunaElipsePanel2.Controls.Clear();
-                        }
-                        else
-                            gunaElipsePanel2.Controls.Add(todoList[i]);
-                    }
-
-                }
+                var reader = new StreamReader(webrespon.GetResponseStream());
+                
+                string data = reader.ReadToEnd();
+                var jp = JObject.Parse(data);
+                var json = jp["Data"];
+               
+                var arr = JsonConvert.DeserializeObject<JArray>(json.ToString());
+                dataGrid.DataSource = arr;
+                MessageBox.Show(String.Format("berhasil"));
             }
-            catch (Exception e)
+            else
             {
-                MessageBox.Show(e.Message);
+                MessageBox.Show(String.Format("Status code = {0}", webrespon.StatusCode)); MessageBox.Show(String.Format("gagal"));
             }
         }
         private void OnTimeEvent(object sender, ElapsedEventArgs e)

@@ -16,6 +16,7 @@ namespace Hubstaf
 {
     public partial class Todo : UserControl
     {
+        koneksi con = new koneksi();
         public Todo()
         {
             InitializeComponent();
@@ -41,6 +42,29 @@ namespace Hubstaf
         {
             get { return _time; }
             set {  _time = value; lbltime.Text = value; }
+        }
+
+        void getdata()
+        {
+            var webrequest = (HttpWebRequest)WebRequest.Create(con.conproject()); 
+            var webrespon = (HttpWebResponse)webrequest.GetResponse();
+            if ((webrespon.StatusCode == HttpStatusCode.OK))
+            {
+                var reader = new StreamReader(webrespon.GetResponseStream());
+               
+                string data = reader.ReadToEnd();
+                var jp = JObject.Parse(data);
+                var json = jp["Data"];
+
+
+                var arr = JsonConvert.DeserializeObject<JArray>(json.ToString());
+                dataGrid.DataSource = arr;
+                MessageBox.Show(String.Format("berhasil"));
+            }
+            else
+            {
+                MessageBox.Show(String.Format("Status code = {0}", webrespon.StatusCode)); MessageBox.Show(String.Format("gagal"));
+            }
         }
 
         public void showtodo()

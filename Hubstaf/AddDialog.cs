@@ -16,8 +16,9 @@ namespace Hubstaf
 {
     public partial class AddDialog : Form
     {
-        SqlConnection con = new SqlConnection(utils.con);
+        //SqlConnection con = new SqlConnection(utils.con);
         SqlCommand cmd;
+        koneksi con = new koneksi();
 
         public AddDialog()
         {
@@ -25,32 +26,42 @@ namespace Hubstaf
             btndone.Enabled = false;
         }
 
-        private void btndone_Click(object sender, EventArgs e)
+        private async void btndone_Click(object sender, EventArgs e)
         {
-            try
+            string now = DateTime.Now.ToString();
+            using (var client = new HttpClient())
             {
-                using(var client = new HttpClient())
+                var payload = new FormUrlEncodedContent(new[]
                 {
-                    var endPoint = new Uri("https://aa05-158-140-172-123.ap.ngrok.io/api/todo");
-                    DateTime dateNow = new DateTime();
-                    var newTodo = new todos
-                    {
-                        idProject = 1,
-                        nameTodo = "Ini Contoh Post",
-                        description = "Ini Description",
-                        changed = dateNow.ToString("dd/MM/yyyy").ToString(),
-                        status = 0
-                    };
-                    var json = JsonConvert.SerializeObject(newTodo);
-                    var payLoad = new StringContent(json, Encoding.UTF8,"application/json");
-                    var result = client.PostAsync(endPoint, payLoad).Result.Content.ReadAsStringAsync().Result;
+                    new KeyValuePair<string, string>("nameTodo",txttodo.Text),
+                    new KeyValuePair<string, string>("changed",now),
+                    new KeyValuePair<string, string>("status",0.ToString()),
+                    new KeyValuePair<string, string>("idProject",Id.idProject.ToString()),
+                    new KeyValuePair<string, string>("idProject",Id.idMember.ToString()),
+                });
+
+
+                var response = await client.PostAsync(con.contodo(), payload);
+                MessageBox.Show(Id.idProject.ToString());
+
+
+                if (response.IsSuccessStatusCode)
+                {
+                    MessageBox.Show("Succes");
+                    this.Close();
                 }
+                else
+                {
+                    MessageBox.Show("Something wrong");
+                }
+
+
             }
-            catch(Exception x)
-            {
-                MessageBox.Show(""+x.ToString());
-            }
+
+        
         }
+    
+    
 
         private void btncancel_Click(object sender, EventArgs e)
         {

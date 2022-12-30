@@ -36,9 +36,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.gunaLabel3 = new Guna.UI.WinForms.GunaLabel();
             this.gunaLabel4 = new Guna.UI.WinForms.GunaLabel();
-            this.gunaComboBox1 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaComboBox2 = new Guna.UI.WinForms.GunaComboBox();
-            this.gunaCheckBox1 = new Guna.UI.WinForms.GunaCheckBox();
             this.gunaTextBox3 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaTextBox4 = new Guna.UI.WinForms.GunaTextBox();
             this.gunaButton1 = new Guna.UI.WinForms.GunaButton();
@@ -69,9 +66,9 @@
             this.pictureBox4 = new System.Windows.Forms.PictureBox();
             this.gunaElipsePanel4 = new Guna.UI.WinForms.GunaElipsePanel();
             this.gunaPictureBox1 = new Guna.UI.WinForms.GunaPictureBox();
-            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.btnmax = new Guna.UI.WinForms.GunaButton();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.quitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.gunaPanel2.SuspendLayout();
             this.gunaElipsePanel2.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -153,59 +150,6 @@
             this.gunaLabel4.TabIndex = 9;
             this.gunaLabel4.Text = "Software";
             // 
-            // gunaComboBox1
-            // 
-            this.gunaComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox1.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.gunaComboBox1.FocusedColor = System.Drawing.Color.Silver;
-            this.gunaComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaComboBox1.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox1.FormattingEnabled = true;
-            this.gunaComboBox1.Location = new System.Drawing.Point(355, 113);
-            this.gunaComboBox1.Name = "gunaComboBox1";
-            this.gunaComboBox1.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaComboBox1.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox1.Size = new System.Drawing.Size(121, 26);
-            this.gunaComboBox1.TabIndex = 10;
-            this.gunaComboBox1.SelectedIndexChanged += new System.EventHandler(this.gunaComboBox1_SelectedIndexChanged);
-            // 
-            // gunaComboBox2
-            // 
-            this.gunaComboBox2.BackColor = System.Drawing.Color.Transparent;
-            this.gunaComboBox2.BaseColor = System.Drawing.Color.White;
-            this.gunaComboBox2.BorderColor = System.Drawing.Color.Silver;
-            this.gunaComboBox2.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.gunaComboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.gunaComboBox2.FocusedColor = System.Drawing.Color.Empty;
-            this.gunaComboBox2.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.gunaComboBox2.ForeColor = System.Drawing.Color.Black;
-            this.gunaComboBox2.FormattingEnabled = true;
-            this.gunaComboBox2.Location = new System.Drawing.Point(492, 113);
-            this.gunaComboBox2.Name = "gunaComboBox2";
-            this.gunaComboBox2.OnHoverItemBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaComboBox2.OnHoverItemForeColor = System.Drawing.Color.White;
-            this.gunaComboBox2.Size = new System.Drawing.Size(121, 26);
-            this.gunaComboBox2.TabIndex = 11;
-            this.gunaComboBox2.SelectedIndexChanged += new System.EventHandler(this.gunaComboBox2_SelectedIndexChanged);
-            // 
-            // gunaCheckBox1
-            // 
-            this.gunaCheckBox1.BaseColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.CheckedOffColor = System.Drawing.Color.Gray;
-            this.gunaCheckBox1.CheckedOnColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            this.gunaCheckBox1.FillColor = System.Drawing.Color.White;
-            this.gunaCheckBox1.ForeColor = System.Drawing.Color.Black;
-            this.gunaCheckBox1.Location = new System.Drawing.Point(629, 113);
-            this.gunaCheckBox1.Name = "gunaCheckBox1";
-            this.gunaCheckBox1.Size = new System.Drawing.Size(116, 20);
-            this.gunaCheckBox1.TabIndex = 12;
-            this.gunaCheckBox1.Text = "Show Completed";
-            this.gunaCheckBox1.CheckedChanged += new System.EventHandler(this.gunaCheckBox1_CheckedChanged);
-            // 
             // gunaTextBox3
             // 
             this.gunaTextBox3.BaseColor = System.Drawing.Color.White;
@@ -216,7 +160,7 @@
             this.gunaTextBox3.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox3.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaTextBox3.Location = new System.Drawing.Point(959, 113);
+            this.gunaTextBox3.Location = new System.Drawing.Point(974, 67);
             this.gunaTextBox3.Name = "gunaTextBox3";
             this.gunaTextBox3.PasswordChar = '\0';
             this.gunaTextBox3.SelectedText = "";
@@ -239,11 +183,11 @@
             this.gunaTextBox4.FocusedForeColor = System.Drawing.SystemColors.ControlText;
             this.gunaTextBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.gunaTextBox4.ForeColor = System.Drawing.Color.DimGray;
-            this.gunaTextBox4.Location = new System.Drawing.Point(355, 145);
+            this.gunaTextBox4.Location = new System.Drawing.Point(350, 100);
             this.gunaTextBox4.Name = "gunaTextBox4";
             this.gunaTextBox4.PasswordChar = '\0';
             this.gunaTextBox4.SelectedText = "";
-            this.gunaTextBox4.Size = new System.Drawing.Size(712, 25);
+            this.gunaTextBox4.Size = new System.Drawing.Size(743, 25);
             this.gunaTextBox4.TabIndex = 14;
             this.gunaTextBox4.Text = "Create a to-do";
             this.gunaTextBox4.Enter += new System.EventHandler(this.gunaTextBox4_Enter);
@@ -262,7 +206,7 @@
             this.gunaButton1.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.gunaButton1.Image = null;
             this.gunaButton1.ImageSize = new System.Drawing.Size(20, 20);
-            this.gunaButton1.Location = new System.Drawing.Point(1082, 145);
+            this.gunaButton1.Location = new System.Drawing.Point(1099, 100);
             this.gunaButton1.Name = "gunaButton1";
             this.gunaButton1.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
             this.gunaButton1.OnHoverBorderColor = System.Drawing.Color.Black;
@@ -279,9 +223,9 @@
             // 
             this.gunaPanel2.BackColor = System.Drawing.Color.DodgerBlue;
             this.gunaPanel2.Controls.Add(this.label1);
-            this.gunaPanel2.Location = new System.Drawing.Point(2, 310);
+            this.gunaPanel2.Location = new System.Drawing.Point(5, 310);
             this.gunaPanel2.Name = "gunaPanel2";
-            this.gunaPanel2.Size = new System.Drawing.Size(331, 44);
+            this.gunaPanel2.Size = new System.Drawing.Size(328, 44);
             this.gunaPanel2.TabIndex = 23;
             // 
             // label1
@@ -316,7 +260,7 @@
             this.gunaElipsePanel1.Location = new System.Drawing.Point(354, 416);
             this.gunaElipsePanel1.Name = "gunaElipsePanel1";
             this.gunaElipsePanel1.Radius = 10;
-            this.gunaElipsePanel1.Size = new System.Drawing.Size(754, 163);
+            this.gunaElipsePanel1.Size = new System.Drawing.Size(771, 163);
             this.gunaElipsePanel1.TabIndex = 27;
             // 
             // timer1
@@ -334,9 +278,9 @@
             this.gunaElipsePanel2.Controls.Add(this.panel5);
             this.gunaElipsePanel2.Controls.Add(this.gunaLabel5);
             this.gunaElipsePanel2.Controls.Add(this.gunaLabel6);
-            this.gunaElipsePanel2.Location = new System.Drawing.Point(354, 238);
+            this.gunaElipsePanel2.Location = new System.Drawing.Point(354, 131);
             this.gunaElipsePanel2.Name = "gunaElipsePanel2";
-            this.gunaElipsePanel2.Size = new System.Drawing.Size(771, 172);
+            this.gunaElipsePanel2.Size = new System.Drawing.Size(771, 279);
             this.gunaElipsePanel2.TabIndex = 31;
             // 
             // panel5
@@ -407,11 +351,11 @@
             this.menuStrip1.Dock = System.Windows.Forms.DockStyle.None;
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
-            this.menuStrip1.Location = new System.Drawing.Point(1097, 49);
+            this.menuStrip1.Location = new System.Drawing.Point(977, 35);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.menuStrip1.ShowItemToolTips = true;
-            this.menuStrip1.Size = new System.Drawing.Size(36, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(156, 24);
             this.menuStrip1.TabIndex = 29;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -419,7 +363,8 @@
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.stopstrip,
-            this.startstrip});
+            this.startstrip,
+            this.quitToolStripMenuItem});
             this.toolStripMenuItem1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.toolStripMenuItem1.Image = global::Hubstaf.Properties.Resources.menu_vertical_48px;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
@@ -558,7 +503,7 @@
             this.gunaElipsePanel4.Controls.Add(this.gunaPictureBox1);
             this.gunaElipsePanel4.Location = new System.Drawing.Point(8, 2);
             this.gunaElipsePanel4.Name = "gunaElipsePanel4";
-            this.gunaElipsePanel4.Size = new System.Drawing.Size(200, 40);
+            this.gunaElipsePanel4.Size = new System.Drawing.Size(325, 40);
             this.gunaElipsePanel4.TabIndex = 35;
             // 
             // gunaPictureBox1
@@ -571,13 +516,6 @@
             this.gunaPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.gunaPictureBox1.TabIndex = 5;
             this.gunaPictureBox1.TabStop = false;
-            // 
-            // flowLayoutPanel1
-            // 
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(417, 190);
-            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(200, 27);
-            this.flowLayoutPanel1.TabIndex = 36;
             // 
             // btnmax
             // 
@@ -615,6 +553,13 @@
             this.pictureBox3.TabIndex = 28;
             this.pictureBox3.TabStop = false;
             // 
+            // quitToolStripMenuItem
+            // 
+            this.quitToolStripMenuItem.Name = "quitToolStripMenuItem";
+            this.quitToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.quitToolStripMenuItem.Text = "Quit";
+            this.quitToolStripMenuItem.Click += new System.EventHandler(this.quitToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -622,7 +567,6 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1137, 591);
-            this.Controls.Add(this.flowLayoutPanel1);
             this.Controls.Add(this.gunaElipsePanel4);
             this.Controls.Add(this.gunaElipsePanel3);
             this.Controls.Add(this.btnmax);
@@ -635,9 +579,6 @@
             this.Controls.Add(this.gunaButton1);
             this.Controls.Add(this.gunaTextBox4);
             this.Controls.Add(this.gunaTextBox3);
-            this.Controls.Add(this.gunaCheckBox1);
-            this.Controls.Add(this.gunaComboBox2);
-            this.Controls.Add(this.gunaComboBox1);
             this.Controls.Add(this.gunaLabel4);
             this.Controls.Add(this.gunaLabel3);
             this.Controls.Add(this.panel1);
@@ -674,9 +615,6 @@
         #endregion
         private Guna.UI.WinForms.GunaElipse gunaElipse1;
         private Guna.UI.WinForms.GunaTextBox gunaTextBox2;
-        private Guna.UI.WinForms.GunaCheckBox gunaCheckBox1;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox2;
-        private Guna.UI.WinForms.GunaComboBox gunaComboBox1;
         private Guna.UI.WinForms.GunaLabel gunaLabel4;
         private Guna.UI.WinForms.GunaLabel gunaLabel3;
         private System.Windows.Forms.Panel panel1;
@@ -710,10 +648,10 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox4;
         private Guna.UI.WinForms.GunaElipsePanel gunaElipsePanel4;
-        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.Panel panel5;
         private Guna.UI.WinForms.GunaLabel gunaLabel5;
         private Guna.UI.WinForms.GunaLabel gunaLabel6;
+        private System.Windows.Forms.ToolStripMenuItem quitToolStripMenuItem;
     }
 }
 

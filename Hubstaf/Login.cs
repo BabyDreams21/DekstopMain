@@ -200,13 +200,53 @@ namespace Hubstaf
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (checkBox1.Checked)
+            if (checkBox1.Checked== false)
             {
                 gunaTextBox2.UseSystemPasswordChar = true;
             }
             else
             {
                 gunaTextBox2.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void gunaTextBox1_Enter(object sender, EventArgs e)
+        {
+            if (gunaTextBox1.Text == "Email")
+            {
+                gunaTextBox1.Text = "";
+
+                gunaTextBox1.ForeColor = Color.Black;
+            }
+        }
+
+        private void gunaTextBox1_Leave(object sender, EventArgs e)
+        {
+            if (gunaTextBox1.Text == "")
+            {
+                gunaTextBox1.Text = "Email";
+
+                gunaTextBox1.ForeColor = Color.DimGray;
+            }
+        }
+
+        private void gunaTextBox2_Enter(object sender, EventArgs e)
+        {
+            if (gunaTextBox2.Text == "Password")
+            {
+                gunaTextBox2.Text = "";
+
+                gunaTextBox2.ForeColor = Color.Black;
+            }
+        }
+
+        private void gunaTextBox2_Leave(object sender, EventArgs e)
+        {
+            if (gunaTextBox2.Text == "")
+            {
+                gunaTextBox2.Text = "Password";
+
+                gunaTextBox2.ForeColor = Color.DimGray;
             }
         }
     }

@@ -494,6 +494,15 @@ namespace Hubstaf
             notifyIcon2.ShowBalloonTip(1000, "Hubstaff", "Stop Timer", ToolTipIcon.Info);
         }
 
+        private void quitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("Are you sure tu exit this page?","Confirmation",MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
+        }
+
         private void gunaComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
 
